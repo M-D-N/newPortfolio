@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>IMDEV | Главная</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML + CSS + JS кодирование шаблонов любой сложности, интеграция верстки в самые популярные в мире системы управления сайтами, разработка ... Фронтенд разработчик IMDEV.">
+  <meta name="keywords" content="portflio, web, html, sass, jquery, developper, programming, programmer, sites, javascript, портфолио, веб-разработка, сайты, фронтенд, ит, програмист, веб-програмист, кодер, узбекистан, ташкент, portfolio, uzbekistan, tashkent, web-developer, programmer, frontend, sites, coder, html, css, js, jq, imdev, IMDEV, HTML, CSS, JS">
+  <meta name="author" content="Mardon_M">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">  
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+  <link rel="manifest" href="./assets/img/site.webmanifest">
+  <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    .ab-popup{
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: -500px;
+      left: 0;
+      z-index: 999;
+      /* display: none; */
+      opacity: 0;
+      transition: 300ms;
+    }
+    .ab-bg{
+      /* background-color: #000000; */
+      width: 100%;
+      height: 100vh;
+      position: absolute !important;
+      top: 0px;
+      left: 0;
+      z-index: 9999 !important;
+      display: flex;
+      justify-content: flex-end;
+      align-items: start;
+    }
+    .ab-wrapper{
+      position: absolute;
+      z-index: 99999 !important;
+      width: 100%;
+      padding: 10px;
+      margin: 200px auto;
+      border: 5px solid #5271FF;
+      height: max-content;
+      background-color: #0c0c0c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .ab-img{
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .close-wrapper{
+      margin-top: 165px;
+      margin-right: -35px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    #wrapper__window.active{
+      top: 0;
+      opacity: 1;
+      transition: 300ms;
+    }
+    /* #close__wrapper.active{
+      top: 0 !important;
+    } */
+    .ab-img:hover{
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/logo3.png" alt="Global">
+    <p>IMDEV</p>
+  </a>
+  <p class="device-notification--message">IMDEV - это опытный фриланс разработчик, специализирующийся на создании высококачественных веб-сайтов с использованием передовых технологий.</p>
+
+  <div class="contact--lockup">
+    <div style="padding: 10px !important;" class="modal">
+      <div class="modal--information">
+        <p>Узбекистан, г. Ташкент</p>
+        <a href="mailto:mardonov.mexriddin1997@gmail.com">mardonov.mexriddin1997@gmail.com</a>
+        <a href="tel:+998990555342">+998 99 055 53 42</a>
+      </div>
+      <ul class="modal--options">
+        <li><a href="#0">Телеграм</a></li>
+        <li><a href="#0">Инстаграм</a></li>
+        <li><a href="#0">Дискорд</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/logo3.png" alt="Global">
+            <p>IMDEV</p>
+          </a>
+          <button class="header--cta cta">Связаться</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Главная</span></li>
+            <li><span>Работы</span></li>
+            <li><span>О себе</span></li>
+            <li><span>Контакты</span></li>
+            <!-- <li><span>Связаться</span></li> -->
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                  
+                <h1>От макета<br>К реальности<br> С IMDEV.</h1>
+                <button class="cta">Связаться
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                <img src="assets/img/h-bg-removebg-preview.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>Визуальное Оформление</h3>
+                  <p>Разработка дизайн-концепции, цветовой палитры и типографики.</p>
+                  <p>Создание визуальных элементов, включая логотипы, иллюстрации и фотографии.</p>
+                </a>
+                <a href="#0">
+                  <h3>Разработка</h3>
+                  <p>Кодирование веб-страниц с использованием HTML, CSS и JavaScript.</p>
+                  <p>Создание динамических элементов и функциональных возможностей.</p>
+                </a>
+                <a href="#0">
+                  <h3>Интеграция и Деплой</h3>
+                  <p>Интеграция контента, установка систем управления контентом (если требуется).</p>
+                  <p>Размещение сайта на хостинге и запуск веб-проекта.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>Мои работы</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a target="_blank" href="https://m-d-n.github.io/spirit/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work2.jpg" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">SPIRIT8</p>
+                      <p class="slider--item-description">We are a digital agency with years of experience and with extraordinary people</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a target="_blank" href="https://m-d-n.github.io/food100/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work3.jpg" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">FOOD100</p>
+                      <p class="slider--item-description">Сайт для онлайн заказов еды и рассчет чека стоимостью так же кило колорий в употреблении.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a target="_blank" href="https://m-d-n.github.io/newPetProjectOnVue/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work4.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Pet Find</p>
+                      <p class="slider--item-description">Сайт был разработан в помощь для тех кто потерял своих питомцев. Сайт был сделан полностью на VueJS framework.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item ">
+                    <a target="_blank" href="https://m-d-n.github.io/inno/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work5.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">INNOVATED</p>
+                      <p class="slider--item-description">We target the audience with our ideas.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item ">
+                    <a target="_blank" href="https://m-d-n.github.io/IVCS/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work6.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">IVCS</p>
+                      <p class="slider--item-description">Каждая работа выполняется как для себя и нет исключения ни для одного заказа.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item ">
+                    <a target="_blank" href="https://m-d-n.github.io/shogirtlik/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work7.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">SHOGIRDLIK</p>
+                      <p class="slider--item-description">SHOGIRDLIK - курс продюсирования визуала от Саида Фазылова.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item">
+                    <a target="_blank" href="https://m-d-n.github.io/mazzami/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work8.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Mazzami</p>
+                      <p class="slider--item-description">Прямой канал коммуникации между бизнесом и клиентом. Сервис сбора отзывов, оценок и не только!</p>
+                    </a>
+                  </li>
+                  <li class="slider--item ">
+                    <a target="_blank" href="https://m-d-n.github.io/imdevEdu/index.html">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work9.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Курсы IMDEV</p>
+                      <p class="slider--item-description">Изучи веб програмирование за 9 месяцев легко и быстро. За это время ты получишь знания frontend разработчика, а так же сертификат от имени нашего курса.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item ">
+                    <a target="_blank" href="https://m-d-n.github.io/Vue-Cinema/">
+                      <div class="slider--item-image">
+                        <img src="assets/img/work1.jpg" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Vue Cinema</p>
+                      <p class="slider--item-description">Платформа для просмотра онлайн фильмов и сериалов.</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Онлайн<br>витрина<br>вашего<br>успеха.</h2>
+                <a href="https://m-d-n.github.io/WatchShop/" target="_blank">Посмотреть
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                <img class="about-img" src="assets/img/about.webp" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a target="_blank" href="https://m-d-n.github.io/imdev/">
+                  <h3>Биография</h3>
+                </a>
+                <a href="https://m-d-n.github.io/imdev/#history" target="_blank">
+                  <h3>История</h3>
+                </a>
+                <a id="open__wrapper" href="#!">
+                  <h3>Способности</h3>
+                </a>
+                <div id="wrapper__window" class="ab-popup">
+                  <div id="close__wrapper" class="ab-bg">
+                    <p class="close-wrapper">&#10060;</p>
+                  </div>
+                  <div class="ab-wrapper">
+                    <img class="ab-img" src="assets/img/icons8-html5-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-css3-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-js-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-gulp-an-open-source-javascript-toolkit-by-fractal-innovations-100.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-sass-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-мопс-96.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-webpack-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-vuejs-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-wordpress-144 (1).png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-bootstrap-144.png" alt="img">
+                    <img class="ab-img" src="assets/img/icons8-modx-an-open-source-content-management-system-and-web-application-framework-96.png" alt="img">
+                    <img class="ab-img" src="assets/img/Bitrix24-1329545814448354354.png" alt="img">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact-wrapper"></div>
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Россия, г. Москва</p>
+                    <a href="mailto:mardonov.mexriddin1997@gmail.com">mardonov.mexriddin1997@gmail.com</a>
+                    <a href="tel:+998990555342">+7 917 559 94 74</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a target="_blank" href="https://t.me/+79175599474">TELEGRAM</a></li>
+                    <li><a target="_blank" href="https://vk.com/id630484468">ВКОНТАКТЕ</a></li>
+                    <li><a target="_blank" href="https://wa.me/+998990555342">WhatsApp</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="l-section section">
+            <div class="hire">
+              <h2>Что бы вы хотели ?</h2>
+              
+              <form action="#" id="form" class="work-request form__body">
+                <div class="work-request--options">
+                  <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Web designer
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Frontentd Dev
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Backend Dev
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="devops">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Devops
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Copyright
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Content manager
+                    </label>
+                  </span>
+                </div>
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" type="text" spellcheck="false" class="form__input _req">
+                    <label for="name">Имя</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="email" type="email" spellcheck="false" class="form__input _req _email">
+                    <label for="email">Почта</label>
+                  </div>
+                </div>
+                <input type="submit" value="Отправить">
+              </form>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Главная</li>
+    <li>Работы</li>
+    <li>О себе</li>
+    <li>Контакты</li>
+    <!-- <li>Конец</li> -->
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+<script>
+
+    let openWrapper = document.getElementById('open__wrapper');
+    let closeWrapper = document.getElementById('close__wrapper');
+    let wrapperWindow = document.getElementById('wrapper__window');
+
+    openWrapper.addEventListener('click', ()=>{
+      wrapperWindow.classList.add('active');
+      // closeWrapper.classList.add('active');
+    })
+    closeWrapper.addEventListener('click', ()=>{
+      wrapperWindow.classList.remove('active');
+      // closeWrapper.classList.remove('active');
+    })
+  </script>
+
+</body>
+</html>
