@@ -1891,6 +1891,14 @@ body {
 @media(max-width: 461px){
     .intro--banner h1{
         font-size: 45px;
-        margin: 30px 0 30px 0;
+        margin: 90px 0 30px 0;
     }
+    .intro--options>a{
+        margin: 5px 0 !important;
+    }
+    .intro--options h3,
+    .intro--options p{
+        margin: 2px 0 !important;
+    }
+}
 }
